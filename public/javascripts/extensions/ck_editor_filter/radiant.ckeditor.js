@@ -2,7 +2,7 @@ function instantiateCkEditor(partIndex){
   // Fixes parts with underscores or spaces in the name
   partIndex = partIndex.replace(/(_| )/g,'-');
 
-  CKEDITOR.config.extraPlugins = 'paperclipped,autogrow,radiantpreview,codemirror,scayt,MediaEmbed';
+  CKEDITOR.config.extraPlugins = 'autogrow,codemirror,scayt,showblocks';
 
   CKEDITOR.config.startupOutlineBlocks = true;
   CKEDITOR.config.autoParagraph = false;
@@ -37,10 +37,10 @@ function instantiateCkEditor(partIndex){
     ['Format'],
     ['Bold','Italic','Strike','-','Subscript','Superscript'],
     ['NumberedList','BulletedList','-','Outdent','Indent','Blockquote'],
-    ['Undo','Redo','-','Find','Replace','-', 'Paste', 'RemoveFormat', 'Scayt'],
+    ['Undo','Redo','-','Find','Replace','-', 'Paste', 'RemoveFormat'],
     ['Link','Unlink','Anchor'],
-    ['Image','Paperclipped','MediaEmbed','Table','HorizontalRule','SpecialChar','-','ShowBlocks'],
-    ['RadiantPreview', '-' ,'Source']
+    ['Image','Table','HorizontalRule','SpecialChar','-','ShowBlocks'],
+    ['Source']
   ],
   CKEDITOR.on('instanceReady',
     function( evt ) {
@@ -75,7 +75,7 @@ function instantiateCkEditor(partIndex){
 
   var timer = setInterval(function() {
     // Make image asset draggable
-    Asset.MakeDraggables();
+    Asset.MakeDraggables;
     // Make asset bucket thumbnails draggable
     $$('div.resized').each(function(element){
       if(!element.hasClassName("move"));

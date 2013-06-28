@@ -8,7 +8,7 @@ CKEDITOR.editorConfig = function( config ) {
   config.startupOutlineBlocks = true;
   config.autoParagraph = false;
   config.skin = "moono";
-  config.extraPlugins = 'codemirror,scayt,autogrow,MediaEmbed';
+  config.extraPlugins = 'autogrow,codemirror,scayt,showblocks';
   config.colorButton_enableMore = false;
   // Code Cleanup
   config.protectedSource.push(/<r:([\S]+)*>.*<\/r:\1>/g);
@@ -38,9 +38,9 @@ CKEDITOR.editorConfig = function( config ) {
     ['Format'],
     ['Bold','Italic','Strike','-','Subscript','Superscript'],
     ['NumberedList','BulletedList','-','Outdent','Indent','Blockquote'],
-    ['Undo','Redo','-','Find','Replace','-', 'Paste', 'RemoveFormat', 'Scayt'],
+    ['Undo','Redo','-','Find','Replace','-','Paste','RemoveFormat','-','spellchecker'],
     ['Link','Unlink','Anchor'],
-    ['Image', 'MediaEmbed', 'Table','HorizontalRule','SpecialChar','-','ShowBlocks'],
+    ['Image','Table','HorizontalRule','SpecialChar','-','ShowBlocks'],
     ['Source']
   ];
 	// Define changes to default configuration here. For example:
